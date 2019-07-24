@@ -1,0 +1,11 @@
+package no.billy.KotlinSpringButikk
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+
+@SpringBootApplication
+class KotlinSpringButikkApplication
+
+fun main(args: Array<String>) {
+	runApplication<KotlinSpringButikkApplication>(*args)
+}
