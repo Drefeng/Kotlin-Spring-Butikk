@@ -9,7 +9,10 @@ data class Order(
         @Id
         @GeneratedValue(strategy = GenerationType.SEQUENCE)
         val id: Int,
-        var delivered: Bool,
+        var isDelivered: Bool,
         val placedOn: LocalDateTime,
-        var deliveredOn: LocalDateTime
+        var deliveredOn: LocalDateTime,
+        @ManyToMany
+        @JoinTable(name="order_product")
+        val products: List<Product>
 )

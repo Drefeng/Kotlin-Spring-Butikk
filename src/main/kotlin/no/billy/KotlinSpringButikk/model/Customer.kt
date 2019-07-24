@@ -12,5 +12,7 @@ data class Customer(
         val address: String,
         val email: String,
         val createdOn: LocalDateTime,
-        var lastLogin: LocalDateTime
+        var lastLogin: LocalDateTime,
+        @OneToMany(mappedBy = "id")
+        val orders: List<Order>
 )
